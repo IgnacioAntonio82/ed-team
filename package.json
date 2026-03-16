@@ -15,7 +15,6 @@
     "electron-updater": "^6.8.3",
     "mongoose": "^9.2.3"
   },
-
   "devDependencies": {
     "electron": "^40.8.2",
     "electron-builder": "^24.13.3"
@@ -23,11 +22,13 @@
   "build": {
     "appId": "com.ownisoft.edteam",
     "productName": "ED Team",
+    "artifactName": "ED-Team-Setup-${version}.${ext}",
     "publish": [
       {
         "provider": "github",
         "owner": "IgnacioAntonio82",
-        "repo": "ed-team"
+        "repo": "ed-team",
+        "vPrefixedTagName": true
       }
     ],
     "files": [
@@ -41,14 +42,17 @@
       {
         "from": "assets/",
         "to": "assets",
-        "filter": [
-          "**/*"
-        ]
+        "filter": ["**/*"]
       }
     ],
     "win": {
       "target": "nsis",
       "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false,
+      "differentialPackage": false
     }
   }
 }
