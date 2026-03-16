@@ -1,6 +1,6 @@
 {
   "name": "ed-team",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Software Cargar, Edicion Eliminacion Productos",
   "main": "src/index.js",
   "type": "commonjs",
@@ -15,7 +15,7 @@
     "electron-updater": "^6.8.3",
     "mongoose": "^9.2.3"
   },
-  
+
   "devDependencies": {
     "electron": "^40.8.2",
     "electron-builder": "^24.13.3"
